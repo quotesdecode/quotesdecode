@@ -1,3 +1,4 @@
+import { UserMenu } from "../components/UserMenu";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -36,15 +37,16 @@ export default function RootLayout({
                 </p>
               </div>
             </div>
-
+            
             <nav className="flex items-center gap-3 text-xs text-zinc-300">
-              <button className="rounded-full border border-zinc-700 px-3 py-1 hover:border-zinc-500 hover:bg-zinc-900">
-                Explore
-              </button>
-              <button className="rounded-full bg-zinc-100 px-3 py-1 font-semibold text-zinc-900 hover:bg-white">
-                Sign in
-              </button>
+               <button className="rounded-full border border-zinc-700 px-3 py-1 hover:border-zinc-500 hover:bg-zinc-900">
+                 Explore
+               </button>
+
+              <UserMenu />
             </nav>
+
+            
           </header>
 
           {/* Page content */}
